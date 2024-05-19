@@ -1,26 +1,48 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Video Recommendation System Documentation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Introduction
+This document provides a comprehensive overview of the Video Recommendation System, which is designed using NestJS and MongoDB. The system leverages user session data to recommend videos based on the current video being watched. The purpose of this document is to elaborate on the design choices, system architecture, API interfaces, and instructions for setting up and running the application.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Design Choices
+
+### Technology Stack
+- **Backend Framework**: **NestJS** - Selected for its robust structure, scalability, and TypeScript support, making it ideal for enterprise-level applications.
+- **Database**: **MongoDB** - Chosen for its schema-less nature which allows for flexibility in data organization and its efficiency in managing large volumes of unstructured data.
+- **Session Management**: **NestJS Session** - Implemented to maintain session data, enhancing user experience by providing personalized video recommendations.
+
+### Architecture Pattern
+- **MVC Pattern** (Model-View-Controller): Employed to decouple data access, business logic, and user interface concerns, thus simplifying maintenance and scalability.
+
+## System Architecture
+
+### Component Overview
+The architecture is composed of several critical components:
+1. **Controller Layer**: Manages HTTP request handling, routing to appropriate services.
+2. **Service Layer**: Implements the core business logic of the application.
+3. **Data Access Layer**: Facilitates communication with MongoDB for storing and retrieving data.
+4. **Session Management**: Tracks user session data to offer tailored video suggestions based on viewing history.
+
+## API Interfaces
+
+Detailed API documentation is shared separately via a Postman collection, which includes endpoints, request-response structures, and typical use case examples. This allows for easier testing and integration by client applications.
+
+**Accessing the API Documentation:**
+- Download the Postman collection from [here](#).
+
+## Run Instructions
+
+### Environment Setup
+First, clone the repository and navigate into the project directory:
+```bash
+git clone https://github.com/Kr18-creator/video-session
+cd video-session
+
+Install the dependencies
+npm install
+
+start the server:
+npm run start
+
 
 ## Description
 
