@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, ConflictException} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { CreateVideoDto } from './dto/create-video.dto';
 import { UpdateVideoDto } from './dto/update-video.dto';
@@ -11,8 +11,18 @@ export class VideosService {
   constructor(@InjectModel('Video') private readonly videoModel: any) {}
 
   // Method to create a new video document in the database
-  createNew(createVideoDto: CreateVideoDto) {
-    return this.videoModel.create(createVideoDto);
+  async createNew(createVideoDto: CreateVideoDto) {
+    const { title, url, choices } = createVideoDto;
+
+    // Check if the ID already exists in the database
+    const existingVideo = await this.videoModel.findOne({ title });
+    if (existingVideo) {
+      // If the title already exists, throw a ConflictException
+      throw new ConflictException('Video with this title already exists');
+    }
+
+    // Create a new entry in the database
+    return this.videoModel.create({ title, url, choices });
   }
 
   // Method to find and return all video documents from the database
