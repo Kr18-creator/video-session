@@ -27,7 +27,7 @@ The architecture is composed of several critical components:
 Detailed API documentation is shared separately via a Postman collection, which includes endpoints, request-response structures, and typical use case examples. This allows for easier testing and integration by client applications.
 
 **Accessing the API Documentation:**
-- Download the Postman collection from [here](#).
+- Import the Postman collection from the file given in repo as video-sessionpostman_collection.json .
 
 ## Run Instructions
 

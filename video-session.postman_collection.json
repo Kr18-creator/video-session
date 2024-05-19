@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "de066fd6-ace4-4698-89ea-afe511b9acf3",
+		"name": "video-session",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26864622"
+	},
+	"item": [
+		{
+			"name": "get video by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/videos/6649800f296a898336bced40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"6649800f296a898336bced40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Introduction to Data structure and algorithm\",\r\n    \"url\": \"https://www.youtube.com/watch?v=MxovSnvSO4E\",\r\n    \"choices\": [\r\n             \"6649808a296a898336bced42\",\r\n        \r\n             \"6649800f296a898336bced40\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delet a video by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/videos/66499d9f2141c1845b9276ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"66499d9f2141c1845b9276ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update an existing video",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Introduction to Javascript\",\r\n    \"url\": \"https://www.youtube.com/watch?v=MxovSnvSO4E\",\r\n    \"choices\": [\r\n             \"664980ff296a898336bced44\",\r\n        \r\n             \"6649808a296a898336bced42\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/videos/66499d9f2141c1845b9276ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"66499d9f2141c1845b9276ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "video choices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/videos/choose/66499d9f2141c1845b9276ba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"choose",
+						"66499d9f2141c1845b9276ba"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
